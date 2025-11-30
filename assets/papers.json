@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Attention Is All You Need",
+    "authors": "Vaswani et al.",
+    "abstract": "提出 Transformer 架构，以自注意力机制替代循环网络。",
+    "date": "2017-06-01",
+    "category": "算法模型",
+    "pdf": "https://arxiv.org/pdf/1706.03762.pdf"
+  },
+  {
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "authors": "Olaf Ronneberger et al.",
+    "abstract": "提出 U-Net 网络，在医学图像分割中取得良好效果。",
+    "date": "2015-05-01",
+    "category": "应用案例",
+    "pdf": "https://arxiv.org/pdf/1505.04597.pdf"
+  },
+  {
+    "title": "A Tutorial on Support Vector Machines",
+    "authors": "Christopher J.C. Burges",
+    "abstract": "系统梳理 SVM 的理论与应用。",
+    "date": "1998-01-01",
+    "category": "理论研究",
+    "pdf": "https://svm-tutorial.github.io/svm.pdf"
+  }
+]

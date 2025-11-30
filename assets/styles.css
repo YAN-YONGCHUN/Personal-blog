@@ -21,6 +21,11 @@ img{max-width:100%;height:auto}
 .menu{display:flex;gap:20px}
 .menu a{color:#4b5563;font-weight:600;padding:8px;border-radius:6px}
 .menu a.active{color:var(--secondary);background:#eaf4ff}
+.dropdown{position:relative}
+.dropdown > a{display:flex;align-items:center;gap:6px}
+.dropdown-menu{position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 10px 25px -5px rgba(0,0,0,.1);min-width:220px;padding:8px;display:none}
+.dropdown-menu a{display:block;padding:8px;color:#374151}
+.dropdown.open .dropdown-menu{display:block}
 .hamburger{display:none;border:none;background:transparent;padding:8px}
 .hero{background:var(--primary);color:#fff;padding:64px 0;text-align:center}
 .hero p{max-width:720px;margin:0 auto 24px;color:#e5e7eb}
@@ -37,3 +42,14 @@ img{max-width:100%;height:auto}
 .skills{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:1024px){.projects,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:768px){.menu{display:none;flex-direction:column;padding:8px 0;border-top:1px solid #eee}.menu.open{display:flex}.hamburger{display:block}.projects,.posts{grid-template-columns:1fr}.section-title{flex-direction:column;gap:10px}}
+@media(max-width:768px){.dropdown-menu{position:static;box-shadow:none;border:none;padding:0;margin-left:8px}}
+
+/* Modeling page */
+.papers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.paper-card{background:#fff;border-radius:12px;box-shadow:0 10px 25px -5px rgba(0,0,0,.1);padding:16px}
+.paper-meta{color:#6b7280;font-size:13px}
+.viewer{position:relative;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}
+.watermark{pointer-events:none;position:absolute;inset:0;background-image:repeating-linear-gradient(45deg, rgba(0,0,0,0.08) 0 40px, transparent 40px 80px);display:flex;align-items:center;justify-content:center;opacity:.15}
+.watermark span{font-size:48px;font-weight:700;color:#111;transform:rotate(-20deg)}
+@media(max-width:1024px){.papers-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:768px){.papers-grid{grid-template-columns:1fr}}
