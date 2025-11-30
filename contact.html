@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联系方式</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/cyber.css">
+</head>
+<body>
+  <nav class="nav"><div class="container wrap"><a class="brand" href="index.html"><div class="logo">IT</div><strong>技术博客</strong></a><button id="hamburger" class="hamburger">☰</button><div id="menu" class="menu"><a href="index.html">主页</a><a href="algorithms.html">算法分享</a><a href="projects.html">项目展示</a><a href="about.html">关于我</a><a href="blog.html">博客</a><a class="active" href="contact.html">联系方式</a></div></div></nav>
+  <header class="hero"><div class="container"><h1>联系方式</h1><p>欢迎前来联系交流[旺柴]</p></div></header>
+  <main>
+    <section class="section"><div class="container">
+      <div class="grid contact-grid">
+        <div class="card"><h3>联系信息</h3><ul class="list"><li>邮箱：2303858680@qq.com</li><li>电话：+86 15656123712</li><li>城市：中国 · 阜阳</li></ul></div>
+        <div class="card"><h3>发送消息</h3>
+          <form onsubmit="event.preventDefault();alert('消息已发送！');this.reset()">
+            <div style="display:grid;gap:12px">
+              <input class="input" placeholder="姓名 *" required>
+              <input class="input" type="email" placeholder="邮箱 *" required>
+              <input class="input" placeholder="主题">
+              <textarea class="input" rows="4" placeholder="消息 *" required></textarea>
+            </div>
+            <div style="margin-top:12px"><button class="btn btn-primary" type="submit">发送消息</button></div>
+          </form>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container inner"><div><strong class="brand"><div class="logo">IT</div>技术博客</strong></div><div style="color:#6b7280;font-size:12px">© 2025 技术博客</div></div></footer>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

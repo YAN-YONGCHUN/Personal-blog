@@ -1,0 +1,92 @@
+:root{--primary:#00eaff;--secondary:#ff2d95;--accent:#7c3aed;--bg:#0b1020;--text:#c9d1d9;--heading:#e2e8f0;--surface:#131a2a}
+body{background:var(--bg);color:var(--text)}
+h1,h2,h3,h4{color:var(--heading)}
+a{color:var(--primary)}
+.nav{background:rgba(14,19,35,.6);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,234,255,.2)}
+.brand .logo{box-shadow:0 0 12px rgba(255,45,149,.6)}
+.menu a{color:#9aa4b2;padding:8px 10px;border-radius:8px;transition:.2s}
+.menu a:hover{color:#fff;background:rgba(0,234,255,.08)}
+.menu a.active{color:#fff;background:rgba(255,45,149,.18);box-shadow:0 0 12px rgba(255,45,149,.4)}
+.hero{position:relative;background:linear-gradient(135deg,rgba(0,234,255,.08),rgba(255,45,149,.08));color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,234,255,.05) 0 2px,transparent 2px 40px),repeating-linear-gradient(90deg,rgba(255,45,149,.05) 0 2px,transparent 2px 40px);opacity:.6;pointer-events:none}
+.hero h1{font-weight:800;background:linear-gradient(90deg,#00eaff,#ff2d95);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#cbd5e1}
+.btn{border-radius:10px;font-weight:700}
+.btn-primary{background:var(--secondary);color:#fff;border:1px solid rgba(255,45,149,.5);box-shadow:0 0 12px rgba(255,45,149,.6),0 0 32px rgba(255,45,149,.3)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-outline{border:2px solid var(--primary);color:var(--primary);box-shadow:0 0 10px rgba(0,234,255,.5) inset}
+.btn-outline:hover{background:rgba(0,234,255,.08)}
+.card{background:rgba(19,26,42,.9);border:1px solid rgba(0,234,255,.15);border-radius:14px;box-shadow:0 0 20px rgba(0,234,255,.12);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 0 24px rgba(0,234,255,.24)}
+.chip{padding:4px 10px;background:rgba(0,234,255,.12);border:1px solid rgba(0,234,255,.3);color:var(--primary);font-weight:700}
+.footer{background:transparent;border-top:1px solid rgba(0,234,255,.2)}
+.footer .inner{color:#9aa4b2}
+.tabs-container{display:flex;gap:16px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
+.algo-tab{min-width:120px;transition:all .3s ease}
+.algo-tab.btn-outline{border-color:rgba(0,234,255,0.3);color:rgba(0,234,255,0.8);background:transparent}
+.algo-tab.btn-outline:hover{border-color:var(--primary);color:var(--primary);background:rgba(0,234,255,0.1);box-shadow:0 0 15px rgba(0,234,255,0.2)}
+.algo-tab.btn-primary{background:linear-gradient(135deg, var(--secondary), #d946ef);border:none;box-shadow:0 0 20px rgba(255,45,149,0.4)}
+.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:768px){
+  .menu{border-top:1px solid rgba(255,255,255,.08)}
+  .hamburger{color:#9aa4b2}
+  .contact-grid{grid-template-columns:1fr}
+}
+.input{width:100%;padding:10px;background:rgba(0,234,255,0.05);border:1px solid rgba(0,234,255,0.2);border-radius:8px;color:#fff;outline:none;transition:.2s}
+.input:focus{border-color:var(--primary);box-shadow:0 0 10px rgba(0,234,255,0.2)}
+.list{list-style:none;padding:0}
+.list li{margin-bottom:12px;display:flex;align-items:center;color:#9aa4b2}
+.list li::before{content:"▹";color:var(--primary);margin-right:8px}
+
+/* Code Block Styling - Unified with Card Style */
+pre {
+  background: rgba(19, 26, 42, 0.95) !important; /* Matches .card base color but slightly more opaque for readability */
+  border: 1px solid rgba(0, 234, 255, 0.15) !important; /* Matches .card border */
+  border-radius: 14px !important; /* Matches .card radius */
+  padding: 20px !important; /* Exact match with .card padding */
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.12) !important; /* Matches .card shadow */
+  margin: 20px 0; /* Consistent vertical spacing */
+  overflow-x: auto;
+  transition: 0.2s ease; /* Matches .card transition */
+}
+
+/* Hover effect to match card interactivity */
+pre:hover {
+  border-color: rgba(0, 234, 255, 0.3) !important;
+  box-shadow: 0 0 24px rgba(0, 234, 255, 0.24) !important; /* Matches .card:hover shadow */
+}
+
+/* Ensure Prism's code colors are respected but font is consistent */
+code, pre {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 0.95rem;
+  text-shadow: none !important;
+  color: var(--text); /* Default text color match */
+}
+
+/* Inline code styling (not inside pre) */
+:not(pre) > code {
+  color: var(--primary); /* Changed to primary (Cyan) to match theme */
+  background: rgba(0, 234, 255, 0.1); /* Changed to Cyan bg */
+  padding: 2px 6px;
+  border: 1px solid rgba(0, 234, 255, 0.2); /* Added border to match card feel */
+  border-radius: 6px; /* Slightly rounded */
+  font-size: 0.9em;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.1); /* Subtle glow */
+}
+
+/* Scrollbar for code blocks - Cyan Theme */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: rgba(0, 234, 255, 0.05);
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: rgba(0, 234, 255, 0.3);
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 234, 255, 0.6);
+}

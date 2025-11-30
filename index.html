@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人技术博客 | 首页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/cyber.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container wrap">
+      <a class="brand" href="index.html"><div class="logo">IT</div><strong>技术博客</strong></a>
+      <button id="hamburger" class="hamburger">☰</button>
+      <div id="menu" class="menu">
+        <a href="algorithms.html">算法分享</a>
+        <a href="projects.html">项目展示</a>
+        <a href="about.html">关于我</a>
+        <a href="blog.html">博客</a>
+        <a href="contact.html">联系方式</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>欢迎来到我的技术博客</h1>
+      <p>专注于算法、计算机视觉与硬件设。</p>
+      <div style="display:flex;gap:12px;justify-content:center"><a class="btn btn-primary" href="projects.html">查看项目</a><a class="btn btn-outline" href="contact.html">联系我</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 style="margin-bottom:16px">核心技能</h2>
+        <div class="grid skills">
+          <div class="card"><h3>算法与数据结构</h3><p>熟练掌握常见算法与复杂度分析。</p></div>
+          <div class="card"><h3>计算机视觉</h3><p>OpenCV/yolo8。</p></div>
+          <div class="card"><h3>硬件设计</h3><p>嵌入式系统与设备原型实现。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>最新项目</h2>
+          <a class="btn btn-outline" href="projects.html">查看所有项目 →</a>
+        </div>
+        <div class="grid projects">
+          <div class="card">
+            <img src="./assets/5.jpg" alt="项目预览图" class="card-image">
+            <h3>智能银行卡识别</h3>
+            <p>OpenCV</p>
+            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">Vue</span><span class="chip">D3</span><span class="chip">TS</span></div>
+          </div>
+          <div class="card">
+            <img src="./assets/4.jpg" alt="项目预览图" class="card-image">
+            <h3>基于单目视觉测量装置</h3>
+            <p>YOLO8 + OpenCV +stm32的实时检测。</p>
+            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">Python</span><span class="chip">OpenCV</span></div>
+          </div>
+          <div class="card">
+            <img src="./assets/3.jpg" alt="项目预览图" class="card-image">
+            <h3>智能家居控制系统</h3>
+            <p>stm32 与 OpenCV 的设备控制。</p>
+            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">ESP32</span><span class="chip">MQTT</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>最新文章</h2>
+          <a class="btn btn-outline" href="blog.html">查看所有文章 →</a>
+        </div>
+        <div class="grid posts">
+          <article class="card"><h3>组合式 API 实战</h3><p>在中大型前端项目的最佳实践。</p><div style="color:#9aa4b2;font-size:13px">2024-11-15 · 8 分钟阅读</div></article>
+          <article class="card"><h3>视觉中的深度学习</h3><p>目标检测与图像分割的落地。</p><div style="color:#9aa4b2;font-size:13px">2024-11-10 · 12 分钟阅读</div></article>
+          <article class="card"><h3>嵌入式开发心得</h3><p>从硬件选型到软件架构经验。</p><div style="color:#9aa4b2;font-size:13px">2024-11-05 · 15 分钟阅读</div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container inner">
+      <div><strong class="brand"><div class="logo">IT</div>技术博客</strong><div style="color:#6b7280;font-size:13px">分享算法、视觉与硬件</div></div>
+      <div style="color:#6b7280;font-size:12px">© 2025 技术博客</div>
+    </div>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
