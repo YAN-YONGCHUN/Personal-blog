@@ -1,27 +1,109 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>关于我</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css">
-  <link rel="stylesheet" href="./assets/cyber.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于我 | Yan</title>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <nav class="nav"><div class="container wrap"><a class="brand" href="index.html"><div class="logo">T</div><strong>技术博客</strong></a><button id="hamburger" class="hamburger">☰</button><div id="menu" class="menu"><a href="index.html">主页</a><a href="algorithms.html">算法分享</a><a href="projects.html">项目展示</a><a class="active" href="about.html">关于我</a><a href="blog.html">博客</a><a href="contact.html">联系方式</a></div></div></nav>
-  <header class="hero"><div class="container"><h1>关于我</h1><p>学习过的语法，和部分技能以及教育经历</p></div></header>
-  <main>
-    <section class="section"><div class="container">
-      <div class="grid skills">
-        <div class="card"><h3>编程语言</h3><ul class="list"><li>Python</li><li>C++</li></ul></div>
-        <div class="card"><h3>技能</h3><ul class="list"><li>stm32</li><li>OpenCV</li><li>web</li><li>pytorch</li></ul></div>
-        <div class="card"><h3>教育背景</h3><p>双非计算机科学与技术专业</p></div>
-        <div class="card"><h3>工作经验</h3><p>无（太菜了根本没机会）</p></div>
+
+<nav class="nav"><div class="container"><a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a><button class="hamburger" id="hamburger">☰</button><div class="menu" id="menu"><a href="index.html">主页</a><a class="active" href="about.html">关于</a><a href="embedded.html">嵌入式</a><a href="algorithms.html">算法</a><a href="modeling.html">建模</a><a href="projects.html">项目</a><a href="blog.html">博客</a><a href="contact.html">联系</a></div></div></nav>
+
+<header class="hero page-hero">
+  <div class="container">
+    <div class="hero-tag"><span class="dot"></span> ABOUT ME</div>
+    <h1>关于 <span class="grad">我</span></h1>
+    <p>嵌入式方向的大二学生，热爱动手实践。从点亮第一颗 LED 到跑起视觉模型，一直在折腾的路上。</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">// profile</div><h2>个人简介</h2></div></div>
+      <div class="grid two">
+        <div class="card" style="padding:28px">
+          <h3 style="margin-bottom:12px">👋 你好，我是 Yan</h3>
+          <p style="color:var(--text-dim);font-size:14.5px">计算机科学与技术专业大二在读，主攻<b style="color:var(--text)">嵌入式开发</b>方向。日常喜欢在开发板上折腾驱动、协议和系统，也参加各类竞赛验证所学。累计获得 <b style="color:var(--accent)">12 项</b> 国家级/省级奖项，涵盖数学建模、人工智能、嵌入式设计等领域。</p>
+        </div>
+        <div class="card" style="padding:28px">
+          <h3 style="margin-bottom:12px">📌 快速档案</h3>
+          <ul class="list">
+            <li>🎓 <b>年级：</b>大二</li>
+            <li>🔧 <b>方向：</b>嵌入式开发</li>
+            <li>🏅 <b>奖项：</b>12 项竞赛荣誉</li>
+            <li>📍 <b>坐标：</b>中国 · 阜阳</li>
+            <li>📮 <b>邮箱：</b>2303858680@qq.com</li>
+          </ul>
+        </div>
       </div>
-    </div></section>
-  </main>
-  <footer class="footer"><div class="container inner"><div><strong class="brand"><div class="logo">T</div>技术博客</strong></div><div style="color:#6b7280;font-size:12px">© 2025 技术博客</div></div></footer>
-  <script src="./assets/app.js"></script>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">// boards</div><h2>开发板 & 技术栈</h2></div></div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="icon">🔩</div><h3>STM32 系列</h3>
+          <p>HAL/标准库开发，GPIO、定时器、DMA、ADC、USART/SPI/I2C，FreeRTOS。</p>
+          <div class="tags"><span class="chip green">C</span><span class="chip">HAL</span><span class="chip amber">FreeRTOS</span></div>
+        </div>
+        <div class="stack-card">
+          <div class="icon">🎛️</div><h3>瑞萨系列</h3>
+          <p>RX/RA 系列 MCU，e2 studio 开发环境，工业级应用场景。</p>
+          <div class="tags"><span class="chip amber">RX</span><span class="chip">RA</span><span class="chip purple">e2 studio</span></div>
+        </div>
+        <div class="stack-card">
+          <div class="icon">🍓</div><h3>树莓派</h3>
+          <p>Linux 环境、GPIO 编程、Python 脚本、服务器/网页部署。</p>
+          <div class="tags"><span class="chip red">Linux</span><span class="chip">Python</span><span class="chip green">GPIO</span></div>
+        </div>
+        <div class="stack-card">
+          <div class="icon">🧰</div><h3>周边生态</h3>
+          <p>ESP32、OpenCV、YOLO8、MQTT、PyTorch、Web 全栈。</p>
+          <div class="tags"><span class="chip amber">ESP32</span><span class="chip">OpenCV</span><span class="chip green">YOLO8</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">// awards</div><h2>竞赛荣誉 · 完整列表</h2></div></div>
+      <div class="honor-grid">
+        <div class="honor"><div class="tier gold">1</div><div class="meta"><b>中国机器人与人工智能大赛</b><span>国家一等奖</span></div><span class="lvl nat">国家级</span></div>
+        <div class="honor"><div class="tier gold">1</div><div class="meta"><b>亚太地区数学建模竞赛</b><span>一等奖</span></div><span class="lvl intl">国际级</span></div>
+        <div class="honor"><div class="tier gold">1</div><div class="meta"><b>电子设计大赛</b><span>一等奖</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier silver">2</div><div class="meta"><b>美国大学生数学建模竞赛</b><span>国家二等奖（Honorable Mention）</span></div><span class="lvl intl">国际级</span></div>
+        <div class="honor"><div class="tier silver">2</div><div class="meta"><b>中国计算机设计大赛</b><span>二等奖 ×2</span></div><span class="lvl nat">国家级</span></div>
+        <div class="honor"><div class="tier silver">2</div><div class="meta"><b>安徽市场调研大赛</b><span>二等奖</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier silver">2</div><div class="meta"><b>蓝桥杯与信息技术人才大赛</b><span>省赛二等奖</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier bronze">3</div><div class="meta"><b>全国大学生嵌入式设计与应用大赛</b><span>国家三等奖</span></div><span class="lvl nat">国家级</span></div>
+        <div class="honor"><div class="tier bronze">3</div><div class="meta"><b>安徽机器人大赛</b><span>三等奖 ×2</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier bronze">3</div><div class="meta"><b>安徽大数据与人工智能竞赛</b><span>三等奖</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier bronze">3</div><div class="meta"><b>五一杯数学建模竞赛</b><span>三等奖</span></div><span class="lvl prov">省级</span></div>
+        <div class="honor"><div class="tier bronze">3</div><div class="meta"><b>全国电子设计大赛</b><span>省赛三等奖</span></div><span class="lvl prov">省级</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">// journey</div><h2>成长历程</h2></div></div>
+      <div class="timeline">
+        <div class="timeline-item"><b>大一 · 入门</b><span>开始接触编程与硬件，学习 C 语言与单片机基础。</span></div>
+        <div class="timeline-item"><b>竞赛之路开启</b><span>参加数学建模、电子设计、人工智能等竞赛，斩获多项大奖。</span></div>
+        <div class="timeline-item"><b>大二 · 深耕嵌入式</b><span>系统学习 STM32 / 瑞萨 / 树莓派，实践视觉 + 硬件项目。</span></div>
+        <div class="timeline-item"><b>现在 · 持续折腾</b><span>保持学习，探索更多可能性。</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container"><p>© 2026 Yan · 嵌入式开发</p></div></footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>

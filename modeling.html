@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建模分享 | Yan</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <nav class="nav"><div class="container"><a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a><button class="hamburger" id="hamburger">☰</button><div class="menu" id="menu"><a href="index.html">主页</a><a href="about.html">关于</a><a href="embedded.html">嵌入式</a><a href="algorithms.html">算法</a><a class="active" href="modeling.html">建模</a><a href="projects.html">项目</a><a href="blog.html">博客</a><a href="contact.html">联系</a></div></div></nav>
+
+  <header class="hero"><div class="container"><h1>建模论文分享</h1><p>按分类浏览论文，支持在线阅读与水印保护</p></div></header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>论文列表</h2>
+          <div style="display:flex;gap:8px">
+            <select id="categorySelect" class="input">
+              <option value="全部">全部</option>
+              <option value="算法模型">算法模型</option>
+              <option value="应用案例">应用案例</option>
+              <option value="理论研究">理论研究</option>
+            </select>
+          </div>
+        </div>
+        <div id="papersGrid" class="papers-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>在线阅读</h2><div id="currentPaperTitle" class="paper-meta"></div></div>
+        <div id="viewer" class="viewer" style="height:70vh">
+          <iframe id="pdfFrame" src="modeling.html" style="width:100%;height:100%;border:0" allow="fullscreen"></iframe>
+          <div class="watermark"><span>YAN-YONGCHUN · Personal-blog</span></div>
+        </div>
+        <div class="paper-meta" style="margin-top:8px">若无法加载，请检查 PDF 链接或网络。阅读器已加水印覆盖，保护内容版权。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p>© 2026 Yan · 嵌入式开发</p></div></footer>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/modeling.js"></script>
+</body>
+</html>

@@ -58,7 +58,7 @@ pre:hover {
 
 /* Ensure Prism's code colors are respected but font is consistent */
 code, pre {
-  font-family: 'Fira Code', monospace !important;
+  font-family: 'Consolas','Courier New',monospace !important;
   font-size: 0.95rem;
   text-shadow: none !important;
   color: var(--text); /* Default text color match */

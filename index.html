@@ -1,101 +1,204 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>个人技术博客 | 首页</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css">
-  <link rel="stylesheet" href="./assets/cyber.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yan | 嵌入式开发工程师</title>
+<meta name="description" content="大二嵌入式开发方向，熟悉 STM32 / 瑞萨 / 树莓派，12 项竞赛奖项。">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="container wrap">
-      <a class="brand" href="index.html"><div class="logo">IT</div><strong>技术博客</strong></a>
-      <button id="hamburger" class="hamburger">☰</button>
-      <div id="menu" class="menu">
-        <a href="algorithms.html">算法分享</a>
-        <a href="projects.html">项目展示</a>
-        <a href="about.html">关于我</a>
-        <a href="blog.html">博客</a>
-        <a href="contact.html">联系方式</a>
-      </div>
-    </div>
-  </nav>
 
-  <header class="hero">
-    <div class="container">
-      <h1>欢迎来到我的技术博客</h1>
-      <p>专注于算法、计算机视觉与硬件设。</p>
-      <div style="display:flex;gap:12px;justify-content:center"><a class="btn btn-primary" href="projects.html">查看项目</a><a class="btn btn-outline" href="contact.html">联系我</a></div>
+<!-- 左侧固定导航 -->
+<aside class="sidenav">
+  <a class="sidenav-logo" href="#home"><div class="logo">Y</div></a>
+  <nav class="sidenav-menu">
+    <a href="#about"><span class="n">01.</span> 关于</a>
+    <a href="#skills"><span class="n">02.</span> 技能</a>
+    <a href="#honors"><span class="n">03.</span> 荣誉</a>
+    <a href="#projects"><span class="n">04.</span> 项目</a>
+    <a href="#blog"><span class="n">05.</span> 文章</a>
+    <a href="#contact"><span class="n">06.</span> 联系</a>
+  </nav>
+  <div class="sidenav-foot">
+    <a href="about.html" title="关于">👤</a>
+    <a href="embedded.html" title="嵌入式">⚙️</a>
+    <a href="algorithms.html" title="算法">🧮</a>
+    <a href="modeling.html" title="建模">📐</a>
+  </div>
+</aside>
+
+<!-- 移动端顶部导航 -->
+<nav class="mobilenav" id="mobilenav">
+  <a class="brand" href="#home"><div class="logo">Y</div></a>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="mobilemenu" id="mobilemenu">
+  <a href="#about">01. 关于</a>
+  <a href="#skills">02. 技能</a>
+  <a href="#honors">03. 荣誉</a>
+  <a href="#projects">04. 项目</a>
+  <a href="#blog">05. 文章</a>
+  <a href="#contact">06. 联系</a>
+  <div class="sep"></div>
+  <a href="about.html">关于我</a>
+  <a href="embedded.html">嵌入式</a>
+  <a href="algorithms.html">算法</a>
+  <a href="modeling.html">建模</a>
+  <a href="projects.html">项目</a>
+  <a href="blog.html">博客</a>
+  <a href="contact.html">联系</a>
+</div>
+
+<main class="main">
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <p class="hero-hi">你好，我是</p>
+      <h1 class="hero-name">Yan.</h1>
+      <h2 class="hero-role">我搞嵌入式开发。</h2>
+      <p class="hero-desc">
+        大二 · 嵌入式开发方向。深耕 <b>STM32 / 瑞萨 / 树莓派</b> 平台，喜欢把硬件与软件揉在一起，做出能跑、能用、能打比赛的东西。累计获得 <b class="hl">14 项</b> 国家级/省级竞赛奖项。
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">查看项目</a>
+        <a class="btn btn-ghost" href="about.html">关于我</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h2 style="margin-bottom:16px">核心技能</h2>
-        <div class="grid skills">
-          <div class="card"><h3>算法与数据结构</h3><p>熟练掌握常见算法与复杂度分析。</p></div>
-          <div class="card"><h3>计算机视觉</h3><p>OpenCV/yolo8。</p></div>
-          <div class="card"><h3>硬件设计</h3><p>嵌入式系统与设备原型实现。</p></div>
-        </div>
-      </div>
-    </section>
+  <!-- 关于 -->
+  <section class="section" id="about">
+    <div class="sec-title"><span class="num">01.</span><h2>关于我</h2><div class="line"></div></div>
+    <div class="sec-body">
+      <p>我是<b>计算机科学与技术专业大二</b>的学生，主攻嵌入式开发方向。从点亮第一颗 LED，到跑起视觉模型、打比赛拿奖，一直在折腾硬件的路上。</p>
+      <p>熟悉 <b>STM32（HAL / FreeRTOS）、瑞萨 RX/RA 系列、树莓派（Linux / GPIO）</b>，也会 Python、C/C++、OpenCV、YOLO8。技术栈：</p>
+      <ul class="tech-list">
+        <li>STM32 / FreeRTOS</li>
+        <li>瑞萨 RX / RA</li>
+        <li>树莓派 / Linux</li>
+        <li>ESP32 / MQTT</li>
+        <li>OpenCV / YOLO8</li>
+        <li>Python / C / C++</li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>最新项目</h2>
-          <a class="btn btn-outline" href="projects.html">查看所有项目 →</a>
+  <!-- 技能 -->
+  <section class="section" id="skills">
+    <div class="sec-title"><span class="num">02.</span><h2>技术栈</h2><div class="line"></div></div>
+    <div class="sec-body">
+      <div class="skill-list">
+        <div class="skill-item">
+          <div class="skill-head"><span class="skill-ico">⚙️</span><h3>嵌入式开发</h3></div>
+          <p>硬件驱动、RTOS、外设编程、串口 / SPI / I2C 通信。</p>
+          <div class="tag-row"><span class="tag">C</span><span class="tag">STM32</span><span class="tag">瑞萨</span><span class="tag">树莓派</span></div>
         </div>
-        <div class="grid projects">
-          <div class="card">
-            <img src="./assets/5.jpg" alt="项目预览图" class="card-image">
-            <h3>智能银行卡识别</h3>
-            <p>OpenCV</p>
-            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">Vue</span><span class="chip">D3</span><span class="chip">TS</span></div>
-          </div>
-          <div class="card">
-            <img src="./assets/4.jpg" alt="项目预览图" class="card-image">
-            <h3>基于单目视觉测量装置</h3>
-            <p>YOLO8 + OpenCV +stm32的实时检测。</p>
-            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">Python</span><span class="chip">OpenCV</span></div>
-          </div>
-          <div class="card">
-            <img src="./assets/3.jpg" alt="项目预览图" class="card-image">
-            <h3>智能家居控制系统</h3>
-            <p>stm32 与 OpenCV 的设备控制。</p>
-            <div style="display:flex;gap:8px;margin-top:8px"><span class="chip">ESP32</span><span class="chip">MQTT</span></div>
-          </div>
+        <div class="skill-item">
+          <div class="skill-head"><span class="skill-ico">📷</span><h3>计算机视觉</h3></div>
+          <p>OpenCV、YOLO8 目标检测，边缘端视觉应用落地。</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">YOLO8</span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span class="skill-ico">🌐</span><h3>Web 开发</h3></div>
+          <p>前后端全栈，能写能部署，Node.js / 静态站。</p>
+          <div class="tag-row"><span class="tag">JS/TS</span><span class="tag">Node.js</span><span class="tag">HTML/CSS</span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span class="skill-ico">🧮</span><h3>算法 / 建模</h3></div>
+          <p>数学建模、算法与数据结构、PyTorch 基础。</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">建模</span></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>最新文章</h2>
-          <a class="btn btn-outline" href="blog.html">查看所有文章 →</a>
-        </div>
-        <div class="grid posts">
-          <article class="card"><h3>组合式 API 实战</h3><p>在中大型前端项目的最佳实践。</p><div style="color:#9aa4b2;font-size:13px">2024-11-15 · 8 分钟阅读</div></article>
-          <article class="card"><h3>视觉中的深度学习</h3><p>目标检测与图像分割的落地。</p><div style="color:#9aa4b2;font-size:13px">2024-11-10 · 12 分钟阅读</div></article>
-          <article class="card"><h3>嵌入式开发心得</h3><p>从硬件选型到软件架构经验。</p><div style="color:#9aa4b2;font-size:13px">2024-11-05 · 15 分钟阅读</div></article>
-        </div>
+  <!-- 荣誉 -->
+      <section class="section" id="honors">
+    <div class="sec-title"><span class="num">03.</span><h2>竞赛荣誉</h2><div class="line"></div></div>
+    <div class="sec-body">
+      <div class="honor-cat">🏆 国家级 / 国际级 <span class="cnt">4 项</span></div>
+      <div class="honor-list">
+        <div class="honor"><span class="tier t1">一等奖</span><b>中国机器人与人工智能大赛</b><span>国家一等奖</span></div>
+        <div class="honor"><span class="tier t1">一等奖</span><b>亚太地区数学建模竞赛</b><span>一等奖 · 国际级</span></div>
+        <div class="honor"><span class="tier t2">二等奖</span><b>美国大学生数学建模竞赛</b><span>国家二等奖</span></div>
+        <div class="honor"><span class="tier t3">三等奖</span><b>全国大学生嵌入式设计与应用大赛</b><span>国家三等奖</span></div>
       </div>
-    </section>
-  </main>
+      <div class="honor-cat" style="margin-top:24px">🥇 省级 <span class="cnt">9 项</span></div>
+      <div class="honor-list">
+        <div class="honor"><span class="tier t1">一等奖</span><b>电子设计大赛</b><span>省一等奖 ×1 · 省二等奖 ×1</span></div>
+        <div class="honor"><span class="tier t2">二等奖</span><b>挑战杯</b><span>省赛银奖</span></div>
+        <div class="honor"><span class="tier t2">二等奖</span><b>中国计算机设计大赛</b><span>省二等奖 ×2</span></div>
+        <div class="honor"><span class="tier t2">二等奖</span><b>安徽市场调研大赛</b><span>二等奖</span></div>
+        <div class="honor"><span class="tier t2">二等奖</span><b>蓝桥杯与信息技术人才大赛</b><span>省赛二等奖</span></div>
+        <div class="honor"><span class="tier t3">三等奖</span><b>安徽机器人大赛</b><span>三等奖 ×2</span></div>
+        <div class="honor"><span class="tier t3">三等奖</span><b>安徽大数据与人工智能竞赛</b><span>三等奖</span></div>
+        <div class="honor"><span class="tier t3">三等奖</span><b>五一杯数学建模竞赛</b><span>三等奖</span></div>
+      </div>
+      <div class="honor-cat" style="margin-top:24px">🎓 校级 <span class="cnt">1 项</span></div>
+      <div class="honor-list">
+        <div class="honor"><span class="tier t1">金奖</span><b>国际大学生创新创业大赛</b><span>校级金奖</span></div>
+      </div>
+    </div>
+  </section><section class="section" id="projects">
+    <div class="sec-title"><span class="num">04.</span><h2>项目展示</h2><div class="line"></div></div>
+    <div class="sec-body">
+      <div class="project-list">
+        <a class="project" href="projects.html">
+          <div class="p-num">01</div>
+          <div class="p-body">
+            <h3>智能银行卡识别 <span class="arrow">↗</span></h3>
+            <p>基于 OpenCV 的银行卡号识别系统。</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Vue</span></div>
+          </div>
+        </a>
+        <a class="project" href="projects.html">
+          <div class="p-num">02</div>
+          <div class="p-body">
+            <h3>单目视觉测量装置 <span class="arrow">↗</span></h3>
+            <p>YOLO8 + OpenCV + STM32 实时检测测量。</p>
+            <div class="tag-row"><span class="tag">YOLO8</span><span class="tag">OpenCV</span><span class="tag">STM32</span></div>
+          </div>
+        </a>
+        <a class="project" href="projects.html">
+          <div class="p-num">03</div>
+          <div class="p-body">
+            <h3>智能家居控制系统 <span class="arrow">↗</span></h3>
+            <p>STM32 与 OpenCV 的设备联动控制。</p>
+            <div class="tag-row"><span class="tag">STM32</span><span class="tag">ESP32</span><span class="tag">MQTT</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章 -->
+  <section class="section" id="blog">
+    <div class="sec-title"><span class="num">05.</span><h2>博客文章</h2><div class="line"></div></div>
+    <div class="sec-body">
+      <div class="post-list">
+        <a class="post" href="blog.html"><span class="date">2024-11-15</span><h3>组合式 API 实战 <span class="arrow">↗</span></h3><p>中大型前端项目的组织方式与最佳实践。</p></a>
+        <a class="post" href="blog.html"><span class="date">2024-11-10</span><h3>视觉中的深度学习 <span class="arrow">↗</span></h3><p>目标检测与图像分割在生产中的落地。</p></a>
+        <a class="post" href="blog.html"><span class="date">2024-11-05</span><h3>嵌入式开发心得 <span class="arrow">↗</span></h3><p>从硬件选型到软件架构的经验之谈。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section" id="contact">
+    <div class="sec-title"><span class="num">06.</span><h2>联系我</h2><div class="line"></div></div>
+    <div class="sec-body contact-body">
+      <p>目前大二，保持学习，也愿意交流合作。无论是技术讨论、项目合作还是竞赛组队，都欢迎来信！</p>
+      <a class="btn btn-primary" href="mailto:2303858680@qq.com">发邮件给我</a>
+      <p class="email-line">2303858680@qq.com</p>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container inner">
-      <div><strong class="brand"><div class="logo">IT</div>技术博客</strong><div style="color:#6b7280;font-size:13px">分享算法、视觉与硬件</div></div>
-      <div style="color:#6b7280;font-size:12px">© 2025 技术博客</div>
-    </div>
+    <p>Designed & Built by Yan · 2026</p>
   </footer>
+</main>
 
-  <script src="./assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

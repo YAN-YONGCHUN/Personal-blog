@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>嵌入式开发分享 | Yan</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="nav"><div class="container">
+  <a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a>
+  <button class="hamburger" id="hamburger">☰</button>
+  <div class="menu" id="menu">
+    <a href="index.html">主页</a>
+    <a href="about.html">关于</a>
+    <a class="active" href="embedded.html">嵌入式</a>
+    <a href="algorithms.html">算法</a>
+    <a href="modeling.html">建模</a>
+    <a href="projects.html">项目</a>
+    <a href="blog.html">博客</a>
+    <a href="contact.html">联系</a>
+  </div>
+</div></nav>
+
+<header class="hero" style="min-height:auto;padding:140px 0 60px">
+  <div class="container">
+    <p class="intro">嵌入式开发分享</p>
+    <h1>硬件 <span class="accent">×</span> 软件</h1>
+    <p class="role">STM32 · 瑞萨 · 树莓派</p>
+    <p class="desc">记录嵌入式学习路上的踩坑与心得：从寄存器配置到 RTOS，从裸机到 Linux。</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="section-head"><div class="kicker">开发板</div><h2>常用平台</h2></div>
+      <div class="skill-grid">
+        <div class="skill reveal">
+          <div class="icon">🔩</div>
+          <h3>STM32 系列</h3>
+          <p>HAL / 标准库开发，GPIO、定时器、DMA、ADC、USART/SPI/I2C，FreeRTOS 多任务。</p>
+          <div class="tags"><span class="tag">C</span><span class="tag">HAL</span><span class="tag">FreeRTOS</span><span class="tag">DMA</span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="icon">🎛️</div>
+          <h3>瑞萨 RX / RA 系列</h3>
+          <p>e2 studio 开发环境，工业级 MCU，稳定可靠的外设与中断系统。</p>
+          <div class="tags"><span class="tag">RX</span><span class="tag">RA</span><span class="tag">e2 studio</span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="icon">🍓</div>
+          <h3>树莓派</h3>
+          <p>Linux 环境、GPIO 编程、Python 脚本、服务器与网页部署。</p>
+          <div class="tags"><span class="tag">Linux</span><span class="tag">Python</span><span class="tag">GPIO</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div class="kicker">知识点</div><h2>学习笔记</h2></div>
+      <div class="post-grid">
+        <article class="post reveal">
+          <div class="date">STM32 · 入门</div>
+          <h3>GPIO 与时钟配置</h3>
+          <p>从寄存器层面理解 IO 口的输入输出模式，以及 RCC 时钟树。</p>
+          <span class="more">阅读 →</span>
+        </article>
+        <article class="post reveal">
+          <div class="date">STM32 · 进阶</div>
+          <h3>FreeRTOS 任务调度</h3>
+          <p>任务创建、优先级、信号量与互斥量的实战应用。</p>
+          <span class="more">阅读 →</span>
+        </article>
+        <article class="post reveal">
+          <div class="date">瑞萨 · 入门</div>
+          <h3>e2 studio 快速上手</h3>
+          <p>瑞萨开发环境的搭建与第一个工程的创建。</p>
+          <span class="more">阅读 →</span>
+        </article>
+        <article class="post reveal">
+          <div class="date">树莓派 · 应用</div>
+          <h3>GPIO 编程实战</h3>
+          <p>用 Python 控制引脚，点亮 LED 与读取传感器。</p>
+          <span class="more">阅读 →</span>
+        </article>
+        <article class="post reveal">
+          <div class="date">协议 · 基础</div>
+          <h3>SPI / I2C / UART 详解</h3>
+          <p>三大常用通信协议的时序、原理与代码实现。</p>
+          <span class="more">阅读 →</span>
+        </article>
+        <article class="post reveal">
+          <div class="date">实战 · 综合</div>
+          <h3>视觉 + 硬件联动</h3>
+          <p>OpenCV/YOLO8 与 STM32 结合的项目实践。</p>
+          <span class="more">阅读 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container"><p>© 2026 Yan · 嵌入式开发</p></div></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
