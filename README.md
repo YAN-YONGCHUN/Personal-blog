@@ -1,33 +1,59 @@
-# Personal-blog
+# 📝 Yan 技术博客 (Personal-blog)
 
-一个静态个人博客项目，包含主页、关于、算法、博客、联系、项目等页面，使用原生 HTML/CSS/JS 实现，适合部署到 GitHub Pages。
+> 个人技术博客 · 嵌入式开发方向 · 大二学生
 
-## 在线访问
+一个现代化的个人技术博客，采用经典开发者主页设计（左侧固定导航 + 单列大标题 + 编号章节），深海军蓝与薄荷绿配色。包含主页、关于、嵌入式、算法、建模、项目、博客、联系等完整页面。
 
-- 站点地址：`https://YAN-YONGCHUN.github.io/Personal-blog/`
+## ✨ 功能特性
 
-## 项目结构
+- 🎨 **现代化设计**：深色科技风 + 渐变强调色，全响应式布局
+- 📱 **多端适配**：桌面端左侧导航，移动端汉堡菜单
+- 🏆 **荣誉展示**：14 项学科竞赛获奖（国家级/省级/校级分组展示）
+- 📖 **内容板块**：主页 / 关于 / 嵌入式开发 / 算法分享 / 数学建模 / 项目展示 / 博客 / 联系方式
+- ⚡ **性能优化**：移除 Google Fonts 依赖，使用系统字体，加载更快
+- 🎬 **交互体验**：滚动淡入动画、卡片悬浮效果、章节滚动高亮
 
-- `index.html` 站点主页
-- `about.html`、`algorithms.html`、`blog.html`、`contact.html`、`projects.html`
-- `assets/` 前端资源目录（`styles.css`、`cyber.css`、`app.js`、图片等）
+## 🚀 在线访问
 
-## 快速开始
+| 平台 | 地址 |
+|---|---|
+| GitHub Pages | https://YAN-YONGCHUN.github.io/Personal-blog/ |
 
-- 克隆仓库：
-  ```bash
-  git clone https://github.com/YAN-YONGCHUN/Personal-blog.git
-  cd Personal-blog
-  ```
-- 本地预览：直接双击 `index.html` 或使用任意静态服务器（如 VS Code Live Server）。
+## 🛠️ 技术栈
 
-## 部署说明（GitHub Pages）
+- 原生 **HTML5 / CSS3 / JavaScript**（零依赖，无需构建）
+- **GitHub Actions** 自动部署到 GitHub Pages
 
-- 已配置 GitHub Actions，推送到 `main` 分支会自动发布到 Pages。
-- 首次构建通常需要 1–3 分钟，如遇 404，请稍后刷新。
+## 📁 项目结构
 
-## 开发提示
+```
+Personal-blog/
+├── index.html            # 主页（单页滚动）
+├── about.html            # 关于我（技能/荣誉/成长）
+├── embedded.html         # 嵌入式开发分享
+├── algorithms.html       # 算法分享（题解）
+├── modeling.html         # 数学建模分享
+├── projects.html         # 项目展示
+├── blog.html             # 博客文章
+├── contact.html          # 联系方式
+├── assets/               # 样式 / 脚本 / 图片
+└── .github/workflows/    # GitHub Actions 部署配置
+```
 
-- 页面为静态文件，修改后提交到 `main` 分支即可自动上线。
-- 资源放置于 `assets/`，注意相对路径与大小写一致。
+## 🏆 竞赛荣誉（部分）
 
+- 🥇 中国机器人与人工智能大赛 · 国家一等奖
+- 🥇 亚太地区数学建模竞赛 · 一等奖
+- 🥈 美国大学生数学建模竞赛 · 国家二等奖
+- 🥉 全国大学生嵌入式设计与应用大赛 · 国家三等奖
+- ... 共 14 项国家级/省级/校级奖项
+
+## 🧑‍💻 关于作者
+
+- 🎓 计算机科学与技术专业大二
+- 🔧 嵌入式开发方向（STM32 / 瑞萨 / 树莓派）
+- 📮 邮箱：2303858680@qq.com
+
+## 📄 许可证
+
+本项目仅供学习交流使用。
