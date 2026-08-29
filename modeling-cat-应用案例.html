@@ -1,49 +1,70 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>应用案例 | Yan</title>
-<link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-src 'none'">
+  <meta name="description" content="数学建模应用案例的方法框架：从现实问题、变量和数据，到模型执行、验证与建议表达。">
+  <meta name="author" content="Yan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0d181c">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="应用案例 | Yan 的数学建模方法库">
+  <meta property="og:description" content="将现实场景翻译为可计算、可验证、可解释的建模问题。">
+  <meta property="og:url" content="https://yan-yongchun.github.io/Personal-blog/modeling-cat-%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B.html">
+  <meta property="og:image" content="https://yan-yongchun.github.io/Personal-blog/assets/2.jpg">
+  <meta property="og:image:alt" content="国际大学生程序设计竞赛标志">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>应用案例 | Yan 的数学建模方法库</title>
+  <link rel="canonical" href="https://yan-yongchun.github.io/Personal-blog/modeling-cat-%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B.html">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="assets/bootstrap.js?v=20260820d"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260820e">
 </head>
 <body>
-  <nav class="nav"><div class="container wrap"><a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a><button id="hamburger" class="hamburger">☰</button><div id="menu" class="menu"><a href="index.html">主页</a><a href="algorithms.html">算法</a><div class="dropdown"><a href="modeling.html">建模 ▾</a><div class="dropdown-menu"><a href="modeling-cat-算法模型.html">算法模型</a><a href="modeling-cat-应用案例.html">应用案例</a><a href="modeling-cat-理论研究.html">理论研究</a></div></div><a href="projects.html">项目</a><a href="about.html">关于</a><a href="blog.html">博客</a><a href="contact.html">联系</a></div></div></nav>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Yan 技术博客主页"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-text">YAN.DEV</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单" data-nav-toggle><span class="nav-toggle-lines" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="about.html">关于</a><a href="projects.html">项目</a><a href="blog.html" aria-current="page">技术笔记</a><a href="contact.html">联系</a></nav>
+  </div></header>
 
-  <header class="hero"><div class="container"><h1>建模论文分享</h1><p>按分类浏览论文，支持在线阅读与水印保护</p></div></header>
+  <main id="main-content">
+    <header class="page-hero"><div class="container"><p class="eyebrow">Modeling / Applications</p><h1>应用案例</h1><p>案例分析的价值在于完整链路：现实对象如何进入模型，计算结果又如何回到现实决策。</p></div></header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>论文列表</h2>
-          <div style="display:flex;gap:8px">
-            <select id="categorySelect" class="input">
-              <option value="全部">全部</option>
-              <option value="算法模型">算法模型</option>
-              <option value="应用案例">应用案例</option>
-              <option value="理论研究">理论研究</option>
-            </select>
-          </div>
-        </div>
-        <div id="papersGrid" class="papers-grid"></div>
-      </div>
-    </section>
+    <section class="section section-white">
+      <div class="container article-layout">
+        <article class="article-body">
+          <h2 id="problem">从题目到问题</h2>
+          <p>先用自己的语言重述题目，区分题面给出的事实、需要求解的目标与隐含约束。不要一开始就套模型名称。</p>
+          <ul class="check-list"><li>明确研究对象、空间范围和时间尺度</li><li>将每个小问转成明确的输入与输出</li><li>标记必须满足的硬约束和可以权衡的软目标</li></ul>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>在线阅读</h2><div id="currentPaperTitle" class="paper-meta"></div></div>
-        <div id="viewer" class="viewer" style="height:70vh">
-          <iframe id="pdfFrame" src="modeling-cat-应用案例.html" style="width:100%;height:100%;border:0" allow="fullscreen"></iframe>
-          <div class="watermark"><span>YAN-YONGCHUN · Personal-blog</span></div>
-        </div>
-        <div class="paper-meta" style="margin-top:8px">若无法加载，请检查 PDF 链接或网络。阅读器已加水印覆盖，保护内容版权。</div>
+          <h2 id="data">从对象到数据</h2>
+          <p>建立变量字典，记录变量含义、类型、单位、来源和缺失情况。对于时间、距离、金额等量纲，统一单位后再计算。</p>
+          <div class="callout"><p><strong>数据底线：</strong>不能用模型自动填补不理解的数据问题。异常值处理、插值与标准化都要记录规则和影响。</p></div>
+
+          <h2 id="execution">从模型到执行</h2>
+          <p>先用小规模样本或人工可核对的示例验证公式，再运行完整数据。中间结果应可导出、可绘图，便于定位错误与解释机制。</p>
+          <ol><li>建立最小可运行版本。</li><li>检查维度、单位和约束是否正确。</li><li>保存关键中间量与随机种子。</li><li>比较至少一个简单基线。</li></ol>
+
+          <h2 id="validation">从输出到验证</h2>
+          <p>预测类任务使用留出数据；优化类任务检查约束满足和最优性；评价类任务检查权重与排序稳定性。必要时用情景分析覆盖乐观、中性和保守条件。</p>
+
+          <h2 id="communication">从结果到建议</h2>
+          <p>结论应回答“发生了什么、为什么、能做什么、代价是什么”。不要只展示一组数值，也不要把相关关系写成因果关系。</p>
+          <div class="grid grid-2"><div class="info-card"><span class="card-index">Result</span><h3>量化结果</h3><p>给出核心指标、比较对象、单位和误差范围。</p></div><div class="info-card"><span class="card-index">Decision</span><h3>行动建议</h3><p>说明适用前提、预期收益、成本与失效边界。</p></div></div>
+        </article>
+
+        <aside class="article-aside" aria-label="本页目录"><h2>本页目录</h2><a href="#problem">从题目到问题</a><a href="#data">从对象到数据</a><a href="#execution">从模型到执行</a><a href="#validation">从输出到验证</a><a href="#communication">从结果到建议</a><a href="modeling.html">返回方法库</a><a href="modeling-cat-理论研究.html">下一分类：理论研究</a></aside>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container inner"><div>© 2026 Yan · 嵌入式开发 <span class="heart">♥</span></div><div><img alt="hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2FYAN-YONGCHUN.github.io%2FPersonal-blog%2F&count_bg=%233498DB&title_bg=%232C3E50&icon=github.svg&icon_color=%23ffffff&title=views&edge_flat=false"></div></div></footer>
-
-  <script src="assets/app.js"></script>
-  <script src="assets/modeling.js"></script>
+  <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="modeling.html">建模首页</a><a href="projects.html">项目</a><a href="contact.html">联系</a></nav></div></footer>
+  <script src="assets/app.js?v=20260820d" defer></script>
 </body>
 </html>

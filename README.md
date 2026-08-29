@@ -1,59 +1,107 @@
-# 📝 Yan 技术博客 (Personal-blog)
+# Yan 个人作品集与技术笔记
 
-> 个人技术博客 · 嵌入式开发方向 · 大二学生
+一个无运行时依赖的多页个人作品集，围绕嵌入式、边缘视觉、算法建模、项目证据和个人经历组织内容。站点支持安装、离线访问、键盘操作和移动端布局。
 
-一个现代化的个人技术博客，采用经典开发者主页设计（左侧固定导航 + 单列大标题 + 编号章节），深海军蓝与薄荷绿配色。包含主页、关于、嵌入式、算法、建模、项目、博客、联系等完整页面。
+在线地址：[yan-yongchun.github.io/Personal-blog](https://yan-yongchun.github.io/Personal-blog/)
 
-## ✨ 功能特性
+## 页面
 
-- 🎨 **现代化设计**：深色科技风 + 渐变强调色，全响应式布局
-- 📱 **多端适配**：桌面端左侧导航，移动端汉堡菜单
-- 🏆 **荣誉展示**：14 项学科竞赛获奖（国家级/省级/校级分组展示）
-- 📖 **内容板块**：主页 / 关于 / 嵌入式开发 / 算法分享 / 数学建模 / 项目展示 / 博客 / 联系方式
-- ⚡ **性能优化**：移除 Google Fonts 依赖，使用系统字体，加载更快
-- 🎬 **交互体验**：滚动淡入动画、卡片悬浮效果、章节滚动高亮
-
-## 🚀 在线访问
-
-| 平台 | 地址 |
+| 页面 | 内容 |
 |---|---|
-| GitHub Pages | https://YAN-YONGCHUN.github.io/Personal-blog/ |
+| `index.html` | 个人宣言、代表作品、能力谱系、竞赛证据与技术笔记入口 |
+| `about.html` | 开发平台、完整竞赛荣誉与成长经历 |
+| `embedded.html` | STM32、瑞萨、树莓派与调试检查清单 |
+| `algorithms.html` | 九个 C++ 题解/模板与复杂度说明 |
+| `modeling.html` | 可筛选的数学建模方法库 |
+| `modeling-cat-*.html` | 算法模型、应用案例、理论研究分类笔记 |
+| `projects.html` | 四个实践项目的目标、处理链路、实践重点和证据边界 |
+| `blog.html` | 已可读专题与明确区分的写作队列 |
+| `contact.html` | 邮件入口、邮箱复制与沟通信息清单 |
+| `404.html` | GitHub Pages 在线错误链接的回退页面 |
+| `offline.html` | 断网且目标页面未缓存时的明确回退状态 |
 
-## 🛠️ 技术栈
+## 特点
 
-- 原生 **HTML5 / CSS3 / JavaScript**（零依赖，无需构建）
-- **GitHub Actions** 自动部署到 GitHub Pages
+- 原生 HTML、CSS、JavaScript，生产环境无需框架、构建产物或第三方脚本。
+- 所有页面共用响应式导航、设计变量、组件与页脚。
+- 支持键盘导航、焦点循环、跳过链接、明确焦点、无脚本降级、减少动态效果偏好和打印样式。
+- 图片声明固定尺寸并提供替代文本，避免加载时布局跳动。
+- 算法标签支持方向键切换，代码可展开和复制。
+- 建模主题支持筛选并同步可分享的查询 URL，分类页使用稳定地址。
+- 联系页不采集数据；邮件按钮直接打开本地客户端，邮箱可一键复制。
+- 每页包含 canonical、Open Graph、robots、CSP、应用清单和主题色元数据。
+- Service Worker 预缓存全部内容页；未知离线路径回退到专用离线页。
 
-## 📁 项目结构
+## 本地预览
 
+在项目根目录运行：
+
+```powershell
+npm run serve
 ```
-Personal-blog/
-├── index.html            # 主页（单页滚动）
-├── about.html            # 关于我（技能/荣誉/成长）
-├── embedded.html         # 嵌入式开发分享
-├── algorithms.html       # 算法分享（题解）
-├── modeling.html         # 数学建模分享
-├── projects.html         # 项目展示
-├── blog.html             # 博客文章
-├── contact.html          # 联系方式
-├── assets/               # 样式 / 脚本 / 图片
-└── .github/workflows/    # GitHub Actions 部署配置
+
+然后访问 `http://127.0.0.1:8000/`。直接打开 HTML 仍可阅读，但 PWA、离线缓存和安全策略需要 HTTP 服务环境。
+
+## 自动检查
+
+快速检查只依赖 Python 标准库和 Node.js：
+
+```powershell
+npm run check
 ```
 
-## 🏆 竞赛荣誉（部分）
+它会检查：
 
-- 🥇 中国机器人与人工智能大赛 · 国家一等奖
-- 🥇 亚太地区数学建模竞赛 · 一等奖
-- 🥈 美国大学生数学建模竞赛 · 国家二等奖
-- 🥉 全国大学生嵌入式设计与应用大赛 · 国家三等奖
-- ... 共 14 项国家级/省级/校级奖项
+- HTML 文档语言、字符集、唯一标题、描述与语义区块；
+- 单一 `h1`、标题层级、重复 ID 和内联事件；
+- 本地页面、锚点、脚本、样式、图片及 CSS 资源；
+- 图片替代文本、固定尺寸、异步解码和 PWA 图标真实像素；
+- canonical、Open Graph、CSP、manifest、sitemap、robots 与离线缓存覆盖；
+- 按钮类型、表单标签、外链安全与危险 JavaScript 写法。
 
-## 🧑‍💻 关于作者
+完整浏览器验收需要一次性安装开发依赖和 Chromium：
 
-- 🎓 计算机科学与技术专业大二
-- 🔧 嵌入式开发方向（STM32 / 瑞萨 / 树莓派）
-- 📮 邮箱：2303858680@qq.com
+```powershell
+npm ci
+npx playwright install chromium
+npm test
+```
 
-## 📄 许可证
+浏览器审计会遍历全部页面的桌面和手机视口，检查控制台、HTTP、图片、溢出、axe 无障碍规则、移动导航、标签页、筛选、邮箱复制、无脚本降级与真实断网导航，并在 `artifacts/blog-audit/` 生成关键页面截图。
+
+生成与线上一致的白名单部署目录：
+
+```powershell
+npm run build
+```
+
+输出位于 `_site/`，只包含 HTML、静态资源、PWA 和搜索引擎发现文件。GitHub Pages 工作流会依次执行完整验收和构建，任一阶段失败都不会发布。
+
+## 目录
+
+```text
+.
+├── .github/workflows/deploy.yml
+├── assets/
+│   ├── app.js
+│   ├── bootstrap.js
+│   ├── modeling.js
+│   ├── styles.css
+│   ├── icon-192.png
+│   ├── icon-512.png
+│   └── images...
+├── scripts/
+│   ├── browser_audit.mjs
+│   ├── build_site.py
+│   └── check_site.py
+├── manifest.webmanifest
+├── robots.txt
+├── sitemap.xml
+├── sw.js
+├── index.html
+└── other pages...
+```
+
+## 许可证
 
 本项目仅供学习交流使用。

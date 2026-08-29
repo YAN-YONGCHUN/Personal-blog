@@ -1,24 +1,68 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>博客 | Yan</title>
-<link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-src 'none'">
+  <meta name="description" content="Yan 的技术博客归档，整理嵌入式开发、计算机视觉、前端工程与算法建模主题。">
+  <meta name="author" content="Yan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0d181c">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="技术笔记 | Yan">
+  <meta property="og:description" content="记录问题、方案、验证过程和可复用结论。">
+  <meta property="og:url" content="https://yan-yongchun.github.io/Personal-blog/blog.html">
+  <meta property="og:image" content="https://yan-yongchun.github.io/Personal-blog/assets/%E5%9B%BE%E6%A0%871.jpg">
+  <meta property="og:image:alt" content="少年站在越野车上眺望云层的插画">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>技术笔记 | Yan</title>
+  <link rel="canonical" href="https://yan-yongchun.github.io/Personal-blog/blog.html">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/图标1.jpg" as="image" fetchpriority="high">
+  <script src="assets/bootstrap.js?v=20260820d"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260820e">
 </head>
 <body>
-  <nav class="nav"><div class="container"><a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a><button class="hamburger" id="hamburger">☰</button><div class="menu" id="menu"><a href="index.html">主页</a><a href="about.html">关于</a><a href="embedded.html">嵌入式</a><a href="algorithms.html">算法</a><a href="modeling.html">建模</a><a href="projects.html">项目</a><a class="active" href="blog.html">博客</a><a href="contact.html">联系</a></div></div></nav>
-  <header class="hero"><div class="container"><h1>技术博客</h1><p>目前还太菜了，不知道怎么写，下面纯属瞎扯</p></div></header>
-  <main>
-    <section class="section"><div class="container">
-      <div class="grid posts">
-        <article class="card"><h3>组合式 API 实战</h3><p>中大型项目的组织方式与经验。</p><div style="color:#9aa4b2;font-size:13px">2024-11-15 · 8 分钟阅读</div></article>
-        <article class="card"><h3>视觉中的深度学习</h3><p>检测与分割在生产中的落地。</p><div style="color:#9aa4b2;font-size:13px">2024-11-10 · 12 分钟阅读</div></article>
-        <article class="card"><h3>嵌入式开发心得</h3><p>硬件与软件的协同设计。</p><div style="color:#9aa4b2;font-size:13px">2024-11-05 · 15 分钟阅读</div></article>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Yan 技术博客主页"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-text">YAN.DEV</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单" data-nav-toggle><span class="nav-toggle-lines" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="about.html">关于</a><a href="projects.html">项目</a><a href="blog.html" aria-current="page">技术笔记</a><a href="contact.html">联系</a></nav>
+  </div></header>
+
+  <main id="main-content">
+    <header class="page-hero has-image blog-hero"><div class="container"><p class="eyebrow">Technical notes</p><h1>技术笔记</h1><p>记录问题背景、解决过程、验证证据与边界条件，把一次实践沉淀成可复用的方法。</p></div></header>
+
+    <section class="section section-white" aria-labelledby="published-title">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">01 / Knowledge base</p><h2 id="published-title">现在就能读的专题</h2></div><p class="section-intro">不是占位文章，而是已经整理好的平台能力、代码模板、排障清单与建模方法。</p></div>
+        <div class="knowledge-index">
+          <a class="knowledge-row reveal" href="embedded.html"><span>01</span><div><h3>嵌入式开发</h3><p>平台能力、开发流程与六组调试检查清单。</p></div><small>STM32 · 瑞萨 · 树莓派</small></a>
+          <a class="knowledge-row reveal" href="algorithms.html"><span>02</span><div><h3>算法笔记</h3><p>九个 C++ 题解与模板，包含复杂度、边界和可复制代码。</p></div><small>C++ · Template · Complexity</small></a>
+          <a class="knowledge-row reveal" href="modeling.html"><span>03</span><div><h3>数学建模方法库</h3><p>算法模型、应用案例和理论研究三个分类入口。</p></div><small>Model · Case · Theory</small></a>
+        </div>
       </div>
-    </div></section>
+    </section>
+
+    <section class="section" aria-labelledby="drafts-title">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">02 / Writing queue</p><h2 id="drafts-title">接下来要写</h2></div><p class="section-intro">三个主题正在从实践记录整理为完整文章，先公开内容边界与核心问题。</p></div>
+        <div class="draft-list">
+          <article class="draft-row reveal"><span>Draft 01</span><div><h3>组合式 API 实战</h3><p>逻辑复用、状态边界、文件组织和可测试接口。</p></div><ul><li>抽取时机</li><li>副作用清理</li><li>接口设计</li></ul></article>
+          <article class="draft-row reveal"><span>Draft 02</span><div><h3>视觉中的深度学习</h3><p>从数据与训练，到评估和边缘部署的完整路径。</p></div><ul><li>数据质量</li><li>现场表现</li><li>资源权衡</li></ul></article>
+          <article class="draft-row reveal"><span>Draft 03</span><div><h3>嵌入式开发心得</h3><p>硬件选型、驱动调试、通信协议与系统联调。</p></div><ul><li>电气时序</li><li>可观察性</li><li>最小系统</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" aria-labelledby="writing-title"><div class="container"><div class="section-head"><div><p class="section-kicker">03 / Standard</p><h2 id="writing-title">一篇技术笔记应该留下什么</h2></div></div><ol class="process-list"><li>可复现的问题背景</li><li>被验证过的解决过程</li><li>关键代码或配置</li><li>失败路径与边界条件</li><li>可迁移的最终结论</li></ol></div></section>
   </main>
-  <footer class="footer"><div class="container"><p>© 2026 Yan · 嵌入式开发</p></div></footer>
-  <script src="assets/app.js"></script>
+
+  <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="index.html">主页</a><a href="projects.html">项目</a><a href="contact.html">联系</a></nav></div></footer>
+  <script src="assets/app.js?v=20260820d" defer></script>
 </body>
 </html>

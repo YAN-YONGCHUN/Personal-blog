@@ -1,49 +1,68 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>算法模型 | Yan</title>
-<link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-src 'none'">
+  <meta name="description" content="数学建模中的预测、优化、评价和模型选择方法，包含任务识别、基线、指标与验证清单。">
+  <meta name="author" content="Yan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0d181c">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="算法模型 | Yan 的数学建模方法库">
+  <meta property="og:description" content="从任务类型出发选择可解释、可验证的建模算法。">
+  <meta property="og:url" content="https://yan-yongchun.github.io/Personal-blog/modeling-cat-%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B.html">
+  <meta property="og:image" content="https://yan-yongchun.github.io/Personal-blog/assets/2.jpg">
+  <meta property="og:image:alt" content="国际大学生程序设计竞赛标志">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>算法模型 | Yan 的数学建模方法库</title>
+  <link rel="canonical" href="https://yan-yongchun.github.io/Personal-blog/modeling-cat-%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B.html">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="assets/bootstrap.js?v=20260820d"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260820e">
 </head>
 <body>
-  <nav class="nav"><div class="container wrap"><a class="brand" href="index.html"><div class="logo">Y</div><span>Yan.DEV</span></a><button id="hamburger" class="hamburger">☰</button><div id="menu" class="menu"><a href="index.html">主页</a><a href="algorithms.html">算法</a><div class="dropdown"><a href="modeling.html">建模 ▾</a><div class="dropdown-menu"><a href="modeling-cat-算法模型.html">算法模型</a><a href="modeling-cat-应用案例.html">应用案例</a><a href="modeling-cat-理论研究.html">理论研究</a></div></div><a href="projects.html">项目</a><a href="about.html">关于</a><a href="blog.html">博客</a><a href="contact.html">联系</a></div></div></nav>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Yan 技术博客主页"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-text">YAN.DEV</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单" data-nav-toggle><span class="nav-toggle-lines" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="about.html">关于</a><a href="projects.html">项目</a><a href="blog.html" aria-current="page">技术笔记</a><a href="contact.html">联系</a></nav>
+  </div></header>
 
-  <header class="hero"><div class="container"><h1>建模论文分享</h1><p>按分类浏览论文，支持在线阅读与水印保护</p></div></header>
+  <main id="main-content">
+    <header class="page-hero"><div class="container"><p class="eyebrow">Modeling / Algorithm models</p><h1>算法模型</h1><p>算法不是越复杂越好。先识别任务、建立基线，再选择能被数据支持、能被指标验证的模型。</p></div></header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>论文列表</h2>
-          <div style="display:flex;gap:8px">
-            <select id="categorySelect" class="input">
-              <option value="全部">全部</option>
-              <option value="算法模型">算法模型</option>
-              <option value="应用案例">应用案例</option>
-              <option value="理论研究">理论研究</option>
-            </select>
-          </div>
-        </div>
-        <div id="papersGrid" class="papers-grid"></div>
-      </div>
-    </section>
+    <section class="section section-white">
+      <div class="container article-layout">
+        <article class="article-body">
+          <h2 id="prediction">预测问题</h2>
+          <p>预测问题的第一步是明确目标变量和时间关系。若样本之间存在时间顺序，应按时间划分训练集与验证集，避免将未来信息泄露到过去。</p>
+          <ul class="check-list"><li>先用均值、上一时刻值或简单回归建立基线</li><li>根据任务选择 MAE、RMSE、准确率或 F1 等指标</li><li>同时观察整体误差和关键区间的局部误差</li></ul>
+          <div class="callout"><p><strong>选择提示：</strong>数据量有限时，简单模型往往更稳定，也更容易解释参数与结果。</p></div>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-title"><h2>在线阅读</h2><div id="currentPaperTitle" class="paper-meta"></div></div>
-        <div id="viewer" class="viewer" style="height:70vh">
-          <iframe id="pdfFrame" src="modeling-cat-算法模型.html" style="width:100%;height:100%;border:0" allow="fullscreen"></iframe>
-          <div class="watermark"><span>YAN-YONGCHUN · Personal-blog</span></div>
-        </div>
-        <div class="paper-meta" style="margin-top:8px">若无法加载，请检查 PDF 链接或网络。阅读器已加水印覆盖，保护内容版权。</div>
+          <h2 id="optimization">优化问题</h2>
+          <p>优化模型由决策变量、目标函数和约束组成。先写清这三部分，再判断是否属于线性规划、整数规划、网络优化或多目标优化。</p>
+          <ol><li>列出所有可以主动调整的决策变量。</li><li>把成本、收益、时间或风险写成目标函数。</li><li>逐条翻译容量、逻辑、资源和边界约束。</li><li>检查模型是否有可行解，以及单位是否一致。</li></ol>
+
+          <h2 id="evaluation">评价与排序</h2>
+          <p>综合评价的关键不是套用固定权重，而是说明指标方向、标准化方式和权重来源。熵权法、层次分析法等方法适用条件不同，应通过权重扰动检查排名是否稳定。</p>
+          <ul class="check-list"><li>区分正向、负向和区间型指标</li><li>避免高度相关指标重复放大同一因素</li><li>报告权重变化对最终排序的影响</li></ul>
+
+          <h2 id="selection">模型选择清单</h2>
+          <p>候选模型至少应从解释能力、数据需求、计算代价和验证结果四方面比较。模型复杂度增加时，必须带来可测量的性能或表达能力提升。</p>
+          <div class="grid grid-2"><div class="info-card"><span class="card-index">Fit</span><h3>问题匹配</h3><p>目标、约束与数据结构是否符合模型假设。</p></div><div class="info-card"><span class="card-index">Proof</span><h3>验证证据</h3><p>是否有基线、留出数据、敏感性分析或误差解释支撑结论。</p></div></div>
+        </article>
+
+        <aside class="article-aside" aria-label="本页目录"><h2>本页目录</h2><a href="#prediction">预测问题</a><a href="#optimization">优化问题</a><a href="#evaluation">评价与排序</a><a href="#selection">模型选择清单</a><a href="modeling.html">返回方法库</a><a href="modeling-cat-应用案例.html">下一分类：应用案例</a></aside>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container inner"><div>© 2026 Yan · 嵌入式开发 <span class="heart">♥</span></div><div><img alt="hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2FYAN-YONGCHUN.github.io%2FPersonal-blog%2F&count_bg=%233498DB&title_bg=%232C3E50&icon=github.svg&icon_color=%23ffffff&title=views&edge_flat=false"></div></div></footer>
-
-  <script src="assets/app.js"></script>
-  <script src="assets/modeling.js"></script>
+  <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="modeling.html">建模首页</a><a href="projects.html">项目</a><a href="contact.html">联系</a></nav></div></footer>
+  <script src="assets/app.js?v=20260820d" defer></script>
 </body>
 </html>
