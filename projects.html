@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-src 'none'">
-  <meta name="description" content="Yan 的项目展示：智能银行卡识别、单目视觉测量装置与 STM32 智能家居控制系统。">
+  <meta name="description" content="Yan 的项目展示：个人实践案例与精选软件、STM32、Raspberry Pi 开源项目目录。">
   <meta name="author" content="Yan">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="项目展示 | Yan">
-  <meta property="og:description" content="将计算机视觉、嵌入式控制与系统联调转化为可运行项目。">
+  <meta property="og:description" content="个人实践案例，以及带许可证和原始来源的开源软件、STM32、Raspberry Pi 项目目录。">
   <meta property="og:url" content="https://yan-yongchun.github.io/Personal-blog/projects.html">
   <meta property="og:image" content="https://yan-yongchun.github.io/Personal-blog/assets/4.jpg">
   <meta property="og:image:alt" content="全国大学生电子设计竞赛标志">
@@ -34,7 +34,7 @@
   </div></header>
 
   <main id="main-content">
-    <header class="page-hero"><div class="container"><p class="eyebrow">Selected projects</p><h1>项目展示</h1><p>让兴趣驱动行动，把视觉算法、嵌入式控制和真实设备连接成完整链路。</p></div></header>
+    <header class="page-hero"><div class="container"><p class="eyebrow">Projects / Open source</p><h1>项目展示</h1><p>从个人实践到可复用的开源工程，按问题、设备和技术栈整理一份可继续深入的项目地图。</p></div></header>
 
     <section class="section section-white" aria-labelledby="project-list-title">
       <div class="container">
@@ -88,9 +88,24 @@
       </div>
     </section>
 
+    <section class="section section-tint project-library" aria-labelledby="project-library-title">
+      <div class="container">
+        <div class="section-head project-library-head"><div><p class="section-kicker">02 / Open source</p><h2 id="project-library-title">开源项目索引</h2></div><p class="section-intro">精选 GitHub 上维护中的软件、STM32 与 Raspberry Pi 项目。每张卡片都保留原始仓库、许可证和星标信息，便于追溯与学习。</p></div>
+        <div class="project-toolbar" aria-label="开源项目筛选">
+          <label class="project-filter-field" for="project-category-filter"><span>项目类别</span><select id="project-category-filter"><option value="all">全部类别</option><option value="software">通用软件</option><option value="stm32">STM32 / Cortex-M</option><option value="raspberry">Raspberry Pi</option></select></label>
+          <label class="project-filter-field project-search-field" for="project-search"><span>搜索项目</span><input id="project-search" type="search" placeholder="名称、技术栈或关键词" autocomplete="off"></label>
+          <p class="project-library-count" aria-live="polite"><strong data-project-count>0</strong> 个项目</p>
+        </div>
+        <div class="project-category-nav" role="group" aria-label="项目类别快捷筛选" data-project-category-nav></div>
+        <div class="project-library-grid" data-project-grid aria-live="polite"></div>
+        <p class="project-library-empty" data-project-empty hidden>没有匹配的项目，请尝试其他关键词或类别。</p>
+        <p class="project-library-note">数据更新时间：<time datetime="2026-08-30" data-project-updated>2026-08-30</time> · 星标会随 GitHub 变化，项目版权和许可证以原仓库为准。</p>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="project-method-title">
       <div class="container">
-        <div class="section-head"><div><p class="section-kicker">02 / Engineering</p><h2 id="project-method-title">项目不止是结果</h2></div><p class="section-intro">展示时同步说明输入、处理、输出与验证方式，才能让项目结构被理解和复现。</p></div>
+        <div class="section-head"><div><p class="section-kicker">03 / Engineering</p><h2 id="project-method-title">项目不止是结果</h2></div><p class="section-intro">展示时同步说明输入、处理、输出与验证方式，才能让项目结构被理解和复现。</p></div>
         <div class="grid grid-3">
           <article class="info-card"><span class="card-index">Input</span><h3>明确输入质量</h3><p>记录相机、传感器、光照与数据格式，避免把输入问题误判成算法问题。</p></article>
           <article class="info-card"><span class="card-index">Pipeline</span><h3>拆分处理链路</h3><p>将采集、预处理、识别、通信和控制分段验证，每段都有可观察结果。</p></article>
@@ -99,10 +114,11 @@
       </div>
     </section>
 
-    <section class="section section-dark" aria-labelledby="project-next-title"><div class="container"><div class="section-head"><div><p class="section-kicker">03 / Explore</p><h2 id="project-next-title">查看相关技术笔记</h2></div></div><div class="button-row"><a class="btn btn-primary" href="embedded.html">嵌入式专题</a><a class="btn btn-secondary" href="algorithms.html">算法笔记</a><a class="btn btn-secondary" href="contact.html">交流项目</a></div></div></section>
+    <section class="section section-dark" aria-labelledby="project-next-title"><div class="container"><div class="section-head"><div><p class="section-kicker">04 / Explore</p><h2 id="project-next-title">查看相关技术笔记</h2></div></div><div class="button-row"><a class="btn btn-primary" href="embedded.html">嵌入式专题</a><a class="btn btn-secondary" href="algorithms.html">算法笔记</a><a class="btn btn-secondary" href="contact.html">交流项目</a></div></div></section>
   </main>
 
   <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="index.html">主页</a><a href="about.html">关于</a><a href="contact.html">联系</a></nav></div></footer>
   <script src="assets/app.js?v=20260820d" defer></script>
+  <script src="assets/projects.js?v=20260830a" defer></script>
 </body>
 </html>
