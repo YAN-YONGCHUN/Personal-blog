@@ -47,9 +47,21 @@
       </div>
     </section>
 
+    <section class="section section-white" aria-labelledby="papers-title">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">02 / Paper archive</p><h2 id="papers-title">38 份论文</h2></div><p class="section-intro">集中收录本次模拟国赛整理出的 38 份主论文，按赛题浏览，点击后打开对应 PDF。</p></div>
+        <div class="filter-bar">
+          <div class="field"><label for="paper-filter">按赛题筛选</label><select class="input" id="paper-filter"><option value="全部">全部赛题</option><option value="2021C">2021 C 题</option><option value="2023C">2023 C 题</option><option value="2025A">2025 A 题</option><option value="2025B">2025 B 题</option></select></div>
+          <p class="section-intro" data-paper-count aria-live="polite">正在读取论文清单…</p>
+        </div>
+        <p class="section-intro" data-paper-status role="status">论文清单加载中。</p>
+        <div class="grid grid-3" id="paper-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="topics-title">
       <div class="container">
-        <div class="section-head"><div><p class="section-kicker">02 / Topics</p><h2 id="topics-title">主题索引</h2></div></div>
+        <div class="section-head"><div><p class="section-kicker">03 / Topics</p><h2 id="topics-title">主题索引</h2></div></div>
         <div class="filter-bar">
           <div class="field"><label for="model-filter">按分类筛选</label><select class="input" id="model-filter"><option value="全部">全部</option><option value="算法模型">算法模型</option><option value="应用案例">应用案例</option><option value="理论研究">理论研究</option></select></div>
           <p class="section-intro" data-filter-count aria-live="polite">当前显示 6 个主题</p>
@@ -70,6 +82,6 @@
 
   <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="index.html">主页</a><a href="projects.html">项目</a><a href="contact.html">联系</a></nav></div></footer>
   <script src="assets/app.js?v=20260820d" defer></script>
-  <script src="assets/modeling.js?v=20260820d" defer></script>
+  <script src="assets/modeling.js?v=20260830a" defer></script>
 </body>
 </html>
