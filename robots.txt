@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yan-yongchun.github.io/Personal-blog/sitemap.xml

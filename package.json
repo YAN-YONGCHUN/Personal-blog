@@ -1,0 +1,17 @@
+{
+  "name": "yan-technical-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "零构建的多页个人技术博客",
+  "scripts": {
+    "check": "python scripts/check_site.py && node --check assets/bootstrap.js && node --check assets/app.js && node --check assets/modeling.js && node --check sw.js",
+    "check:browser": "node scripts/browser_audit.mjs",
+    "build": "python scripts/build_site.py",
+    "test": "npm run check && npm run check:browser",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "playwright": "1.61.0"
+  }
+}

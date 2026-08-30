@@ -1,35 +1,67 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>联系方式</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css">
-  <link rel="stylesheet" href="./assets/cyber.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; frame-src 'none'">
+  <meta name="description" content="联系 Yan，交流嵌入式开发、计算机视觉、竞赛实践与项目合作。">
+  <meta name="author" content="Yan">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0d181c">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="联系 Yan">
+  <meta property="og:description" content="通过邮箱交流技术与项目想法。">
+  <meta property="og:url" content="https://yan-yongchun.github.io/Personal-blog/contact.html">
+  <meta property="og:image" content="https://yan-yongchun.github.io/Personal-blog/assets/%E5%9B%BE%E6%A0%871.jpg">
+  <meta property="og:image:alt" content="少年站在越野车上眺望云层的插画">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>联系 Yan</title>
+  <link rel="canonical" href="https://yan-yongchun.github.io/Personal-blog/contact.html">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="assets/bootstrap.js?v=20260820d"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260820e">
 </head>
 <body>
-  <nav class="nav"><div class="container wrap"><a class="brand" href="index.html"><div class="logo">IT</div><strong>技术博客</strong></a><button id="hamburger" class="hamburger">☰</button><div id="menu" class="menu"><a href="index.html">主页</a><a href="algorithms.html">算法分享</a><div class="dropdown"><a href="modeling.html">建模分享 ▾</a><div class="dropdown-menu"><a href="modeling.html?category=算法模型">算法模型</a><a href="modeling.html?category=应用案例">应用案例</a><a href="modeling.html?category=理论研究">理论研究</a></div></div><a href="projects.html">项目展示</a><a href="about.html">关于我</a><a href="blog.html">博客</a><a class="active" href="contact.html">联系方式</a></div></div></nav>
-  <header class="hero"><div class="container"><h1>联系方式</h1><p>欢迎前来联系交流[旺柴]</p></div></header>
-  <main>
-    <section class="section"><div class="container">
-      <div class="grid contact-grid">
-        <div class="card"><h3>联系信息</h3><ul class="list"><li>邮箱：2303858680@qq.com</li><li>电话：+86 15656123712</li><li>城市：中国 · 阜阳</li></ul></div>
-        <div class="card"><h3>发送消息</h3>
-          <form onsubmit="event.preventDefault();alert('消息已发送！');this.reset()">
-            <div style="display:grid;gap:12px">
-              <input class="input" placeholder="姓名 *" required>
-              <input class="input" type="email" placeholder="邮箱 *" required>
-              <input class="input" placeholder="主题">
-              <textarea class="input" rows="4" placeholder="消息 *" required></textarea>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header"><div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Yan 技术博客主页"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-text">YAN.DEV</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单" data-nav-toggle><span class="nav-toggle-lines" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="about.html">关于</a><a href="projects.html">项目</a><a href="blog.html">技术笔记</a><a href="contact.html" aria-current="page">联系</a></nav>
+  </div></header>
+
+  <main id="main-content">
+    <header class="page-hero"><div class="container"><p class="eyebrow">Contact</p><h1>联系我</h1><p>欢迎交流嵌入式、视觉项目、竞赛实践或合作想法，邮件是最稳定的联系方式。</p></div></header>
+
+    <section class="section section-white" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">01 / Say hello</p><h2 id="contact-title">直接写信给我</h2></div><p class="section-intro">邮件适合附带项目背景、设备型号、日志或资料，也方便双方保留完整上下文。</p></div>
+        <div class="contact-direct-layout">
+          <div class="contact-direct">
+            <p class="contact-label">Email</p>
+            <a class="contact-email" href="mailto:2303858680@qq.com">2303858680@qq.com</a>
+            <div class="button-row">
+              <a class="btn btn-primary" href="mailto:2303858680@qq.com?subject=%E6%8A%80%E6%9C%AF%E4%B8%8E%E9%A1%B9%E7%9B%AE%E4%BA%A4%E6%B5%81">写一封邮件</a>
+              <button class="btn btn-outline" type="button" data-copy-email data-email="2303858680@qq.com">复制邮箱</button>
             </div>
-            <div style="margin-top:12px"><button class="btn btn-primary" type="submit">发送消息</button></div>
-          </form>
+            <p class="form-status" role="status" aria-live="polite" data-copy-status></p>
+          </div>
+          <dl class="contact-context">
+            <div><dt>所在地</dt><dd>中国 · 阜阳</dd></div>
+            <div><dt>适合交流</dt><dd>嵌入式开发、边缘视觉、竞赛实践、项目合作</dd></div>
+            <div><dt>建议附上</dt><dd>目标、当前现象、运行环境与关键限制</dd></div>
+          </dl>
         </div>
       </div>
-    </div></section>
+    </section>
+
+    <section class="section" aria-labelledby="message-guide-title"><div class="container"><div class="section-head"><div><p class="section-kicker">02 / Context</p><h2 id="message-guide-title">让沟通更高效</h2></div></div><div class="grid grid-3"><article class="info-card"><span class="card-index">01</span><h3>说明目标</h3><p>希望解决什么问题，最终结果应达到什么状态。</p></article><article class="info-card"><span class="card-index">02</span><h3>附上现状</h3><p>硬件型号、软件环境、日志、截图或最小复现步骤。</p></article><article class="info-card"><span class="card-index">03</span><h3>标明限制</h3><p>时间、接口、功耗、成本或已有方案等关键约束。</p></article></div></div></section>
   </main>
-  <footer class="footer"><div class="container inner"><div><strong class="brand"><div class="logo">IT</div>技术博客</strong></div><div style="display:flex;align-items:center;gap:8px"><img alt="hits" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2FYAN-YONGCHUN.github.io%2FPersonal-blog%2Fcontact.html&count_bg=%233498DB&title_bg=%232C3E50&icon=github.svg&icon_color=%23ffffff&title=views&edge_flat=false"></div></div></footer>
-  <script src="./assets/app.js"></script>
+
+  <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="index.html">主页</a><a href="about.html">关于</a><a href="projects.html">项目</a></nav></div></footer>
+  <script src="assets/app.js?v=20260820d" defer></script>
 </body>
 </html>
