@@ -35,11 +35,28 @@
   </div></header>
 
   <main id="main-content">
-    <header class="page-hero has-image algorithm-hero"><div class="container"><p class="eyebrow">Algorithms & data structures</p><h1>算法笔记</h1><p>把题目拆成约束、数据结构、复杂度与边界条件，再用经过边界检查的 C++ 核心实现验证思路。</p></div></header>
+    <header class="page-hero has-image algorithm-hero"><div class="container"><p class="eyebrow">Algorithms & data structures</p><h1>算法分享</h1><p>从力扣精选题开始，按知识点建立可执行的刷题路径，再回到题解与模板验证复杂度和边界。</p><div class="algorithm-hero-stats" aria-label="题库概览"><div><strong>120</strong><span>精选题</span></div><div><strong>6</strong><span>知识点</span></div><div><strong>20</strong><span>每类题目</span></div></div></div></header>
+
+    <section class="section section-white" aria-labelledby="leetcode-library-title">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">01 / LeetCode library</p><h2 id="leetcode-library-title">力扣精选题库</h2></div><p class="section-intro">六个高频知识点，每类 20 道题。先按主题建立顺序，再用难度和关键词缩小练习范围。</p></div>
+        <div class="algorithm-toolbar" aria-label="题库筛选">
+          <div class="field"><label for="algorithm-topic-filter">知识点</label><select class="input" id="algorithm-topic-filter"><option value="all">全部知识点</option></select></div>
+          <div class="field"><label for="algorithm-difficulty-filter">难度</label><select class="input" id="algorithm-difficulty-filter"><option value="all">全部难度</option><option value="简单">简单</option><option value="中等">中等</option><option value="困难">困难</option></select></div>
+          <div class="field algorithm-search-field"><label for="algorithm-search">搜索题号或题名</label><input class="input" id="algorithm-search" type="search" placeholder="例如：two sum 或 704" autocomplete="off"></div>
+          <p class="section-intro algorithm-count" data-algorithm-count aria-live="polite">正在读取 120 道精选题…</p>
+        </div>
+        <div class="algorithm-catalog-layout">
+          <aside class="algorithm-topic-panel" aria-label="知识点导航"><p class="algorithm-topic-label">知识点导航</p><div class="algorithm-topic-nav" data-topic-nav></div></aside>
+          <div class="algorithm-catalog-main"><p class="section-intro" data-algorithm-status role="status">题库加载中。</p><div class="algorithm-problem-grid" id="leetcode-grid" aria-live="polite"></div><p class="algorithm-empty" data-algorithm-empty hidden>没有匹配的题目，换一个知识点或关键词试试。</p></div>
+        </div>
+        <noscript><p class="callout">题库需要启用 JavaScript 才能加载筛选数据；下方仍保留静态题解与 C++ 模板。</p></noscript>
+      </div>
+    </section>
 
     <section class="section" aria-labelledby="algorithm-library-title">
       <div class="container">
-        <div class="section-head"><div><p class="section-kicker">01 / Library</p><h2 id="algorithm-library-title">题解与模板</h2></div><p class="section-intro">按问题、核心思路、复杂度和实现组织，便于对照约束选择解法。</p></div>
+        <div class="section-head"><div><p class="section-kicker">02 / Notes</p><h2 id="algorithm-library-title">题解与模板</h2></div><p class="section-intro">按问题、核心思路、复杂度和实现组织，便于对照约束选择解法。</p></div>
         <div class="tabs" role="tablist" aria-label="算法内容分类" aria-orientation="horizontal">
           <button class="tab-button" id="tab-problems" type="button" role="tab" aria-selected="true" aria-controls="panel-problems" tabindex="0">算法题解</button>
           <button class="tab-button" id="tab-templates" type="button" role="tab" aria-selected="false" aria-controls="panel-templates" tabindex="-1">常用模板</button>
@@ -243,10 +260,11 @@ long long rangeSum(const vector&lt;long long&gt;&amp; prefix, int left, int righ
       </div>
     </section>
 
-    <section class="section section-white" aria-labelledby="method-title"><div class="container"><div class="section-head"><div><p class="section-kicker">02 / Checklist</p><h2 id="method-title">做题检查清单</h2></div></div><div class="grid grid-3"><article class="info-card"><span class="card-index">Before</span><h3>先确认约束</h3><p>数据规模、值域、是否有序、图是否带负权，决定可接受的时间和空间复杂度。</p></article><article class="info-card"><span class="card-index">During</span><h3>写清楚不变量</h3><p>明确窗口、区间或队列在每一步保持什么性质，避免只凭样例调试。</p></article><article class="info-card"><span class="card-index">After</span><h3>覆盖边界输入</h3><p>检查空输入、单元素、重复值、极值和无解情况，再评估整数溢出。</p></article></div></div></section>
+    <section class="section section-white" aria-labelledby="method-title"><div class="container"><div class="section-head"><div><p class="section-kicker">03 / Checklist</p><h2 id="method-title">做题检查清单</h2></div></div><div class="grid grid-3"><article class="info-card"><span class="card-index">Before</span><h3>先确认约束</h3><p>数据规模、值域、是否有序、图是否带负权，决定可接受的时间和空间复杂度。</p></article><article class="info-card"><span class="card-index">During</span><h3>写清楚不变量</h3><p>明确窗口、区间或队列在每一步保持什么性质，避免只凭样例调试。</p></article><article class="info-card"><span class="card-index">After</span><h3>覆盖边界输入</h3><p>检查空输入、单元素、重复值、极值和无解情况，再评估整数溢出。</p></article></div></div></section>
   </main>
 
   <footer class="site-footer"><div class="container footer-shell"><p>© <span data-year>2026</span> Yan · 嵌入式开发与技术实践</p><nav class="footer-links" aria-label="页脚导航"><a href="index.html">主页</a><a href="projects.html">项目</a><a href="contact.html">联系</a></nav></div></footer>
   <script src="assets/app.js?v=20260820d" defer></script>
+  <script src="assets/algorithms.js?v=20260830a" defer></script>
 </body>
 </html>

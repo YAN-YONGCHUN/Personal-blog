@@ -1,6 +1,6 @@
 // Cache version bumped when the site moved from /blog/ to the origin root:
 // the activate handler purges caches left by the old /blog/ scope.
-const CACHE_NAME = 'yan-blog-v20260830a';
+const CACHE_NAME = 'yan-blog-v20260830b';
 const CACHE_PREFIX = 'yan-blog-';
 const OFFLINE_PAGE = './offline.html';
 
@@ -24,6 +24,8 @@ const APP_SHELL = [
   './assets/app.js?v=20260820d',
   './assets/modeling.js?v=20260830a',
   './assets/papers.json',
+  './assets/algorithms.js?v=20260830a',
+  './assets/leetcode-catalog.json',
   './assets/styles.css?v=20260820e',
   './assets/icon-192.png',
   './assets/icon-512.png',
